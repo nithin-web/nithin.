@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Destinations WishList</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <style>
+        h1, h2, h3, h4, ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: Arial;
+  color: #333;
+}
+
+header {
+  padding: 50px;
+  background-color: cornflowerblue;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+main {
+  max-width: 800px;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+main form {
+  width: 40%;
+}
+
+main article {
+  width: 45%
+}
+
+h1, h2, h3, h4, p {
+  margin-bottom: 1em;
+}
+
+#title {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: .5em;
+}
+
+input, textarea, #destination_details_form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+  border: 1px solid #666;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.card {
+  padding: 20px;
+  background-color: #efefef;
+  margin-bottom: 20px;
+}
+    </style>
+	
+	<header>
+        <h1>Vacation Destinations Wish List</h1>
+        <p>Found exciting places to visition on your next vacation? Use the form below to add them to your wish list</p>
+    </header>
+	
+	<main>
+		<form id="destination_details_form">
+			
+			<label for="name">Destination name</label>
+            <input required type="text" id="name" placeholder="Enter the name of the destination">
+
+            <label for="location">Location</label>
+            <input required type="text" id="location" placeholder="Where is it located?">
+			
+			<label for="photo">Photo</label>
+            <input type="url" id="photo" placeholder="Enter an image url of the image">
+
+            <label for="description">Description</label>
+            <textarea type="text" id="description" placeholder="Where is it located?"></textarea>
+
+			<button type="submit">Add to list</button>
+		</form>
+		
+		<article>
+            <h2 id="title">Enter destination details</h2>
+            <div id="destinations_container">
+            </div>
+
+        </article>
+	</main>
+
+    <!-- Our JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
